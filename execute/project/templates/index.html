@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Command Interface</title>
+    <style>
+        body {
+            background-image: url('123.jpg'); /* Update with the path to your background image */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+        }
+        img[src=""],img:not([src]){
+            opacity:0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload File and Execute Command</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="submit" value="Upload and Execute" />
+    </form>
+    <p>Tips: {{ tips }}</p>
+    <img src="{{ user_image }}" width="100%">
+</body>
+</html>
+
